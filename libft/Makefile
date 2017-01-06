@@ -91,6 +91,7 @@ SRC_LIB	=	ft_atoi.c \
 			ft_joinfree.c \
 			ft_putnstr.c \
 			ft_pow.c \
+			ft_free_ptr.c
 
 SRC_PF	=	ft_printf/ft_printf.c \
 			ft_printf/get_rules.c \

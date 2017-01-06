@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 17:48:15 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/03 12:16:50 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 17:07:43 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ void		ft_print_formatted_str(const char *s, t_info *info, t_rule *rule,
 		{
 			color_check = 0;
 			if (info->printstr[info->i] == '{')
-				color_check = ft_get_color(info);
+				color_check = ft_get_color_code(info);
 			if (info->printstr[info->i] && info->printstr[info->i] != '%' &&
 															color_check == 0)
 				++info->i;

@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:27:14 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/05 18:33:30 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 17:02:18 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int				main(int argc, char *argv[])
 	char	*name_fractal;
 
 	if (!(argc == 2 && (name_fractal = ft_get_user_input(argv[1]))))
-		ft_exit_error_str("Usage: ./fractol julia || mandelbrot || bship");
+		ft_exit("Usage: ./fractol julia || mandelbrot || bship");
 	if (!(app = ft_new_window(WINDOW_SIZE_X, WINDOW_SIZE_Y, "Fractol")))
-		ft_exit_error();
+		ft_exit("Error while creating the window");
 	ft_init_fractal(app, name_fractal);
 	mlx_hook(app->win, MOTION_NOTIFY, PTR_MOTION_MASK, ft_motion_hook, app);
 	mlx_key_hook(app->win, ft_key_hook, app);

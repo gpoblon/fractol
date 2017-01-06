@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 14:27:58 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/03 12:44:30 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 17:06:49 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ int							ft_isconv(char c);
 void						ft_base_rule(const char *s, t_info *info,
 													t_rule *rule, va_list va);
 char						*ft_floats_conv(t_info *info, t_rule *rule);
-int							ft_get_color(t_info *i);
+int							ft_get_color_code(t_info *i);
 t_lst						*ft_newlink(t_lst **lst, int len);
 void						ft_printstr(t_info *info);
 void						ft_listdel(t_lst **bgn_lst, t_lst *lst);

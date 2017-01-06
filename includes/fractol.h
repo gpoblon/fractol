@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:25:26 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/05 18:25:28 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 21:49:34 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <math.h>
-#include <pthread.h>
+# include <pthread.h>
 # include "../minilibx/osx/mlx.h"
 # include "keycode_osx.h"
 
@@ -99,6 +99,7 @@ void				*ft_compute_fractal(char *name_fractal);
 void				ft_draw_fractal(t_app *app);
 void				ft_init_color(t_cscheme	*cs);
 int					ft_get_color(double c_index, t_cscheme *cs);
+void				ft_color_preset(int keycode, t_app *app);
 void				ft_color_event(int keycode, t_app *app);
 void				ft_modify_color(int keycode, t_app *app);
 int					ft_key_hook(int keycode, t_app *app);

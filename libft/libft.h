@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 11:52:37 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/05 18:39:08 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 17:11:50 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,7 @@ void					ft_putmap(char **map);
 void					ft_mapcpy(char **dst, const char **src);
 char					**ft_mapdup(char **map);
 void					ft_free_map(char **map);
+void					ft_free_ptr(void *ptr);
 
 unsigned long long		ft_pow(unsigned long long n, unsigned long long pow);
 

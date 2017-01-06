@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:26:58 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 16:46:41 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 21:13:07 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,24 @@ static void		ft_scale_mouse(int button, int x, int y, t_app *app)
 {
 	if (button == 1 || button == 4)
 	{
-		app->fractal->move.x += 0.002 *
-			(WINDOW_SIZE_X / 2 - x) / app->fractal->zoom;
-		app->fractal->move.y -= 0.002 *
-			(WINDOW_SIZE_Y / 2 - y) / app->fractal->zoom;
+		if (y > 0 && y > 0)
+		{
+			app->fractal->move.x += 0.002 *
+				(WINDOW_SIZE_X / 2 - x) / app->fractal->zoom;
+			app->fractal->move.y -= 0.002 *
+				(WINDOW_SIZE_Y / 2 - y) / app->fractal->zoom;
+		}
 		if (button == 4)
 		{
+			if (app->fractal->i_max <= 500)
+				app->fractal->i_max += 5;
 			app->fractal->zoom *= 2;
 		}
 	}
 	if (button == 5)
 	{
+		if (app->fractal->i_max >= 50)
+			app->fractal->i_max -= 5;
 		app->fractal->zoom =
 			(app->fractal->zoom <= 1) ? 1 : app->fractal->zoom / 2;
 	}

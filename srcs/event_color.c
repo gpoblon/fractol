@@ -6,11 +6,27 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:26:48 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 16:52:49 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 21:30:17 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void		ft_color_preset(int keycode, t_app *app)
+{
+	if (keycode == 12)
+		*app->fractal->cs = (t_cscheme){0.34, 0.185, 0.15, 6, 6, 6, 197,
+										210, 210, 55, 55, 55};
+	else if (keycode == 13)
+		*app->fractal->cs = (t_cscheme){0.31, 0.155, 0.21, 14, 7, 10, 197,
+										180, 230, 55, 75, 80};
+	else if (keycode == 14)
+		*app->fractal->cs = (t_cscheme){0.25, 0.645, 0.14, 6, 6, 6, 207,
+										210, 190, 50, 70, 90};
+	else if (keycode == 15)
+		*app->fractal->cs = (t_cscheme){0.03, 0.015, 0.01, 6, 6, 6, 97,
+										200, 200, 50, 55, 60};
+}
 
 void		ft_color_event(int keycode, t_app *app)
 {

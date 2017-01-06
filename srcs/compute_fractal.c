@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:26:17 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 16:51:57 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/06 17:12:50 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static int		ft_compute_julia(t_fractal *f, t_point *p)
 {
+	int		i;
+
 	f->new.r = 1.5 * (p->x - f->w / 2) / (0.5 * f->zoom * f->w) - f->move.x;
 	f->new.i = (p->y - f->h / 2) / (0.5 * f->zoom * f->h) + f->move.y;
 	i = -1;
