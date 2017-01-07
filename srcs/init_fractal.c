@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:27:08 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 16:48:23 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/07 18:43:56 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,21 @@ static void		ft_init_bship(t_fractal *f)
 	f->h = WINDOW_SIZE_Y;
 }
 
+static void		ft_init_web(t_fractal *f)
+{
+	f->fun = ft_compute_fractal("web");
+	f->name = "web";
+	f->c.r = 0.5;
+	f->c.i = -0.5;
+	f->move.x = 0;
+	f->move.y = 0;
+	f->zoom = 1;
+	f->i_max = ITERATION_MAX;
+	f->w = WINDOW_SIZE_X;
+	f->h = WINDOW_SIZE_Y;
+	f->stop_motion = FALSE;
+}
+
 void			ft_init_fractal(t_app *app, char *name_fractal)
 {
 	t_fractal	*f;
@@ -63,6 +78,8 @@ void			ft_init_fractal(t_app *app, char *name_fractal)
 		ft_init_mandelbrot(f);
 	if (!(ft_strcmp(name_fractal, "bship")))
 		ft_init_bship(f);
+	if (!(ft_strcmp(name_fractal, "web")))
+		ft_init_web(f);
 	app->fractal = f;
 	ft_init_color(f->cs);
 }

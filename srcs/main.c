@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:27:14 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/07 15:06:36 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/07 18:44:55 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static char		*ft_get_arg(char *argv)
 {
 	if (ft_strcmp(argv, "julia") == 0 || ft_strcmp(argv, "mandelbrot") == 0 ||
-		ft_strcmp(argv, "bship") == 0)
+		ft_strcmp(argv, "bship") == 0 || ft_strcmp(argv, "web") == 0)
 		return (argv);
 	return (NULL);
 }
@@ -58,9 +58,11 @@ int				main(int argc, char *argv[])
 	t_app	*app;
 	char	*name_fractal;
 
+	if (argc != 2)
+		ft_exit("Invalid number of arguments");
 	name_fractal = ft_get_arg(argv[1]);
-	if (argc != 2 && !name_fractal)
-		ft_exit("Error. Valid input: ./fractol julia || mandelbrot || bship");
+	if (!name_fractal)
+		ft_exit("Valid input: ./fractol julia || mandelbrot || bship || web");
 	app = ft_new_window(WINDOW_SIZE_X, WINDOW_SIZE_Y, "Fractol");
 	if (!app)
 		ft_exit("Error while creating the window");

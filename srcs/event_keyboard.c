@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:26:53 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/07 15:10:38 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/07 18:43:16 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ static void		ft_reset(int keycode, t_app *app)
 	{
 		if (!ft_strcmp(app->fractal->name, "julia") ||
 			!ft_strcmp(app->fractal->name, "mandelbrot") ||
-			!ft_strcmp(app->fractal->name, "bship"))
+			!ft_strcmp(app->fractal->name, "bship") ||
+			!ft_strcmp(app->fractal->name, "web"))
 			ft_init_fractal(app, app->fractal->name);
 	}
 }
