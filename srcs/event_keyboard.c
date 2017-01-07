@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:26:53 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 21:11:33 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/07 15:10:38 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,9 @@ static void		ft_reset(int keycode, t_app *app)
 static void		ft_mod_iter(int keycode, t_app *app)
 {
 	if (keycode == KEY_PAGE_UP)
-	{
 		app->fractal->i_max += 10;
-	}
-	else if (keycode == KEY_PAGE_DOWN)
-	{
-		app->fractal->i_max =
-			(app->fractal->i_max <= 50) ? 50 : app->fractal->i_max - 10;
-	}
+	else if (keycode == KEY_PAGE_DOWN && app->fractal->i_max >= 50)
+		app->fractal->i_max -= 10;
 }
 
 int				ft_key_hook(int keycode, t_app *app)
@@ -78,6 +73,7 @@ int				ft_key_hook(int keycode, t_app *app)
 	{
 		mlx_destroy_window(app->mlx, app->win);
 		free(app->fractal);
+		free(app->fractal->cs);
 		free(app);
 		exit(EXIT_SUCCESS);
 	}

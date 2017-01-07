@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:26:58 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 21:13:07 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/07 13:00:41 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void		ft_scale_mouse(int button, int x, int y, t_app *app)
 {
 	if (button == 1 || button == 4)
 	{
-		if (y > 0 && y > 0)
+		if (y >= 0 && y >= 0)
 		{
 			app->fractal->move.x += 0.002 *
 				(WINDOW_SIZE_X / 2 - x) / app->fractal->zoom;

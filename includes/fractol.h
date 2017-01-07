@@ -6,7 +6,7 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:25:26 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/06 21:49:34 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/07 12:14:12 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,6 @@ typedef struct		s_thread_data
 	int				i;
 }					t_thread_data;
 
-t_app				*ft_new_window(int width, int height, char *title);
-char				*ft_get_user_input(char *argv);
 void				ft_init_fractal(t_app *app, char *name_fractal);
 void				*ft_compute_fractal(char *name_fractal);
 void				ft_draw_fractal(t_app *app);
