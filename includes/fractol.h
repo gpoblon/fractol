@@ -6,20 +6,20 @@
 /*   By: gpoblon <gpoblon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 18:25:26 by gpoblon           #+#    #+#             */
-/*   Updated: 2017/01/07 12:14:12 by gpoblon          ###   ########.fr       */
+/*   Updated: 2017/01/26 19:03:53 by gpoblon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include "../libft/libft.h"
+# include <libft.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <math.h>
 # include <pthread.h>
-# include "../minilibx/osx/mlx.h"
+# include <mlx.h>
 # include "keycode_osx.h"
 
 # define WINDOW_SIZE_X 800
