@@ -20,8 +20,6 @@ LFT_PATH	=	./libft
 INC_PATH	=	./includes
 MLX_PATH	=
 
-INC			=	-I$(INC_PATH)
-
 CC			=	gcc -g
 CFLAGS		=	-Werror -Wextra -Wall
 LDFLAGS		=	-lft -lmlx -lm -lpthread -L$(LFT_PATH)
@@ -52,7 +50,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	$(CC) -o $@ -c $< $(CFLAGS) $(INC) -I$(LFT_PATH)
+	$(CC) -o $@ -c $< $(CFLAGS) -I$(INC_PATH) -I$(LFT_PATH)
 
 clean:
 	rm -fv $(OBJ)
